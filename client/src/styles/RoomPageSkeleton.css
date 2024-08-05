@@ -1,0 +1,13 @@
+.skeleton-container {
+  animation: skeleton-animation 1s linear infinite alternate;
+}
+
+@keyframes skeleton-animation {
+  from {
+    background-color: hsl(0, 0%, 20%);
+  }
+
+  to {
+    background-color: hsl(25, 0%, 30%);
+  }
+}

@@ -1,0 +1,17 @@
+@keyframes drawer {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(75px);
+  }
+}
+
+@keyframes drawer-reverse {
+  from {
+    transform: translateX(75px);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

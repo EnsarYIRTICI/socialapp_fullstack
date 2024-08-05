@@ -1,0 +1,8 @@
+Dockerfile
+.dockerignore
+
+node_modules
+
+uploads
+
+src/config/db.ts

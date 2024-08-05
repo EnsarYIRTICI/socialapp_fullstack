@@ -1,0 +1,39 @@
+@keyframes placeholder {
+  from {
+    font-size: 13px;
+    top: 30%;
+  }
+  to {
+    font-size: 10px;
+    top: 10%;
+  }
+}
+
+@keyframes placeholder-reverse {
+  from {
+    font-size: 10px;
+    top: 10%;
+  }
+  to {
+    font-size: 13px;
+    top: 30%;
+  }
+}
+
+@keyframes input {
+  from {
+    padding-top: 0px;
+  }
+  to {
+    padding-top: 10px;
+  }
+}
+
+@keyframes input-reverse {
+  from {
+    padding-top: 10px;
+  }
+  to {
+    padding-top: 0px;
+  }
+}
