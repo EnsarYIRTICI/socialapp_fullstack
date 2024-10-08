@@ -1,3 +1,5 @@
+docker-compose.yml
+
 # Client
 
 client/node_modules
@@ -24,7 +26,12 @@ client/yarn-error.log*
 server/node_modules
 server/uploads
 server/build
+server/.env.*
+!server/.env.example
 
 # Test
 
 test/node_modules
+
+
+

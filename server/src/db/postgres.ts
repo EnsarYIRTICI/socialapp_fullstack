@@ -1,4 +1,9 @@
 import pg from "pg";
-import DB_CONFIG from "../config/db.js";
 
-export default new pg.Pool(DB_CONFIG.PG);
+const connectionString = process.env.PG_URL;
+
+console.log("PG_URL", "=", connectionString);
+
+export default new pg.Pool({
+  connectionString: connectionString,
+});

@@ -1,3 +1,10 @@
+import dotenv from "dotenv";
+
+const envFile =
+  process.env.NODE_ENV === "docker" ? ".env.docker" : ".env.development";
+
+dotenv.config({ path: envFile });
+
 class SERVER_CONFIG {
   static HTTP: string = "http://";
   static HTTPS: string = "https://";

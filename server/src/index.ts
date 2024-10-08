@@ -2,13 +2,12 @@ import http from "http";
 import express from "express";
 import cors from "cors";
 
+import SERVER_CONFIG from "./config/config.js";
+
 import { Server as SocketServer } from "socket.io";
 import { PeerServer } from "peer";
 
-import SERVER_CONFIG from "./config/config.js";
-
 import mongo from "./db/mongo.js";
-
 import { sequelize } from "./sequelize/migration.js";
 
 import FileManager from "./methods/fm.js";

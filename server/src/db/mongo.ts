@@ -1,4 +1,7 @@
 import { MongoClient } from "mongodb";
-import DB_CONFIG from "../config/db.js";
 
-export default new MongoClient(DB_CONFIG.MONGO);
+const connectionString = process.env.MONGO_URL;
+
+console.log("MONGO_URL", "=", connectionString);
+
+export default new MongoClient(process.env.MONGO_URL || "");

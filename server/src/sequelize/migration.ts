@@ -1,13 +1,8 @@
 import { Sequelize } from "sequelize";
 import Columns from "./columns.js";
 import NAMES from "./names.js";
-import DB_CONFIG from "../config/db.js";
 
-const PG: any = DB_CONFIG.PG;
-
-const _sequelize = new Sequelize(PG.database, PG.user, PG.password, {
-  host: PG.host,
-  port: PG.port,
+const _sequelize = new Sequelize(process.env.PG_URL || "", {
   dialect: "postgres",
   logging: false,
 });

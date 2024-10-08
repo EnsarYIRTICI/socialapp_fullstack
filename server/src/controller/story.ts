@@ -36,7 +36,7 @@ class StoryController {
 
         savePath = FileManager.storiesPath + jsonData.uid + "/";
 
-        FM.createFolderIfExist(jsonData.uid);
+        FM.createFolderIfExist(savePath);
 
         stream.pipe(fs.createWriteStream(savePath + file_name));
       });

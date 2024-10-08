@@ -17,7 +17,7 @@ class RoomController {
       const count = parseInt(response.rows["0"].count);
       res.json(count);
     } catch (error) {
-      console.log("display kurulamadi");
+      console.log("room kurulamadi");
     }
   }
 
@@ -27,7 +27,7 @@ class RoomController {
       const response = await this.roomService.findAll(fid, lim, set);
       res.json(response.rows);
     } catch (error) {
-      console.log("display kurulamadi");
+      console.log("room kurulamadi");
     }
   }
 
@@ -40,8 +40,8 @@ class RoomController {
       if (response.rows.length > 0) {
         res.json({ roomid: roomid, userData: userData.rows[0] });
       } else {
-        await this.roomService.create(roomid, moment().format());
         await this.bubbleService.createRoom(roomid);
+        await this.roomService.create(roomid, moment().format());
         res.json({ roomid: roomid, userData: userData.rows[0] });
       }
     } catch (error) {
