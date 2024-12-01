@@ -1,5 +1,5 @@
 import busboy from "busboy";
-import StoryService from "../service/story.js";
+import StoryService from "../service/story.service.js";
 import { Request, Response } from "express";
 import HandleManager from "../methods/hm.js";
 import FileManager from "../methods/fm.js";

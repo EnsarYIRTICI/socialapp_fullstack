@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import PostService from "../service/post.js";
+import PostService from "../service/post.service.js";
 import HandleManager from "../methods/hm.js";
 import moment from "moment";
 

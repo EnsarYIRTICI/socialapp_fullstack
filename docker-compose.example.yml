@@ -51,7 +51,7 @@ services:
       - backend
 
 volumes:
-  mongodata:
   dbdata:
+  mongodata:
   uploads:
 

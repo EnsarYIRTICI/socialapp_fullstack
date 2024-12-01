@@ -243,10 +243,8 @@ function RoomScreen({ roomid, userData, ID_F }: RoomScreenProps) {
 
         socket.emit(SocketKeys.MESSAGE, {
           sender_uid: authData.uid,
-          receiver_uid: userData.uid,
           message: cleanMessage,
           roomid: roomid,
-          isSaveDb: true,
         });
       }
     } catch (error) {

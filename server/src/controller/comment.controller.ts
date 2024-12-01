@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import moment from "moment";
-import CommentService from "../service/comment.js";
+import CommentService from "../service/comment.service.js";
 
 class CommentController {
   commentService = new CommentService();

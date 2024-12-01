@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import UserService from "../service/user.js";
-import ProfileService from "../service/profile.js";
-import FollowService from "../service/follow.js";
+import UserService from "../service/user.service.js";
+import ProfileService from "../service/profile.service.js";
+import FollowService from "../service/follow.service.js";
 import moment from "moment";
 
 class UserController {

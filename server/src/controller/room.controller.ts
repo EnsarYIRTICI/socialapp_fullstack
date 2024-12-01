@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import RoomService from "../service/room.js";
+import RoomService from "../service/room.service.js";
 import HandleManager from "../methods/hm.js";
 import moment from "moment";
-import BubbleService from "../service/bubble.js";
-import UserService from "../service/user.js";
+import BubbleService from "../service/bubble.service.js";
+import UserService from "../service/user.service.js";
 
 class RoomController {
   roomService = new RoomService();

@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import BubbleService from "../service/bubble.js";
+import BubbleService from "../service/bubble.service.js";
 import moment from "moment";
 import { Bubble, BubbleFile } from "../objects/bubble.js";
-import RoomService from "../service/room.js";
+import RoomService from "../service/room.service.js";
 import HM from "../methods/hm.js";
 import FM from "../methods/fm.js";
 import busboy from "busboy";
@@ -127,7 +127,7 @@ class BubbleController {
         const bubble = new Bubble(
           new ObjectId(strid),
           isLastIndex
-            ? jsonData.message.length > 0
+            ? jsonData.message?.length > 0
               ? jsonData.message
               : null
             : null,
@@ -148,7 +148,7 @@ class BubbleController {
               await this.bubbleService.send(jsonData.roomid, bubble);
               await this.roomService.update(
                 isLastIndex
-                  ? jsonData.message.length > 0
+                  ? jsonData.message?.length > 0
                     ? jsonData.message
                     : file_name
                   : file_name,

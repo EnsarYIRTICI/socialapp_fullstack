@@ -1,15 +1,15 @@
 export class SocketKeys {
-  static JOIN = "joinRoom";
-  static LEAVE = "leaveRoom";
+  static JOIN = "join-room";
+  static LEAVE = "leave-room";
 
-  static UPDATE_MESSAGE = "sendUpdate";
-  static MESSAGE = "sendMessage";
-  static WRITING = "sendWriting";
+  static UPDATE_MESSAGE = "update";
+  static MESSAGE = "message";
+  static WRITING = "writing";
 
-  static ON_UPDATE_MESSAGE = "onUpdate";
-  static ON_MESSAGE = "onMessage";
-  static ON_DISPLAY = "onDisplay";
-  static ON_WRITING = "onWriting";
+  static ON_UPDATE_MESSAGE = "on-update";
+  static ON_MESSAGE = "on-message";
+  static ON_DISPLAY = "on-display";
+  static ON_WRITING = "on-writing";
 }
 
 export class SocketMessage {

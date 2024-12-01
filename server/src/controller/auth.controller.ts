@@ -1,15 +1,20 @@
 import { Request, Response } from "express";
 import moment from "moment";
-import AuthService from "../service/auth.js";
+import AuthService from "../service/auth.service.js";
 import HandleManager from "../methods/hm.js";
 import { tables } from "../sequelize/migration.js";
 import Mailer from "../methods/nodemailer.js";
-import UserService from "../service/user.js";
+import UserService from "../service/user.service.js";
 import SERVER_CONFIG from "../config/config.js";
 
 class AuthController {
-  authService = new AuthService();
-  userService = new UserService();
+  private authService: AuthService;
+  private userService: UserService;
+
+  constructor() {
+    this.authService = new AuthService();
+    this.userService = new UserService();
+  }
 
   async login(req: Request, res: Response): Promise<void> {
     try {
@@ -25,7 +30,7 @@ class AuthController {
         res.status(401).send({ error: "Username or password is incorrect" });
       }
     } catch (error) {
-      console.log("kullanici giris saglayamadi");
+      console.log("\n--> Kullanici Giris Saglayamadi --> \n\n", error);
 
       res.status(401).send({
         error: "Something went wrong",

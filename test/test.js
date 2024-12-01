@@ -7,7 +7,7 @@ const HM = require("./methods/hm");
 
 const PG_CONFIG = {
   user: "postgres",
-  password: "1453",
+  password: "turing",
   host: "localhost",
   port: 5432,
   database: "socialapp",
@@ -20,7 +20,7 @@ const userService = new UserService(postgres);
 const storyService = new StoryService(postgres);
 
 async function main() {
-  await storyService.find();
+  await userService.find();
   await postgres.end();
 }
 
